@@ -1,0 +1,5 @@
+python
+google generative ai
+langchain
+PyPDF2
+FAISS
