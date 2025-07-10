@@ -1,0 +1,37 @@
+# Python cache
+__pycache__/
+*.py[cod]
+*.so
+
+# Environment & dependency files
+.env
+.venv/
+env/
+venv/
+pip-log.txt
+
+# Streamlit cache
+.streamlit/
+*.stcache
+*.stlog
+
+# System files
+.DS_Store
+Thumbs.db
+
+# VS Code settings (optional)
+.vscode/
+
+# Logs
+*.log
+
+# FAISS index files (if saved)
+*.index
+*.faiss
+
+# Exported files
+*.png
+*.pdf
+
+# Notebooks (if using)
+.ipynb_checkpoints/
