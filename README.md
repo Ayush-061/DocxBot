@@ -22,34 +22,6 @@ A Streamlit web application that allows you to upload a PDF document, create sem
 - OpenAI API Key (sign up at [OpenAI](https://platform.openai.com/))
 - Required Python packages (see requirements below)
 
-sequenceDiagram
-    participant User
-    participant StreamlitUI
-    participant PDFLoader
-    participant Embedder
-    participant FAISS
-    participant OpenAI
-
-    User->>StreamlitUI: Upload PDF
-    StreamlitUI->>PDFLoader: Extract text from PDF
-    PDFLoader-->>StreamlitUI: Return extracted text
-    StreamlitUI->>StreamlitUI: Chunk the text
-
-    StreamlitUI->>Embedder: Generate embeddings for chunks
-    Embedder->>OpenAI: Call embedding API
-    OpenAI-->>Embedder: Return embeddings
-    Embedder-->>StreamlitUI: Return all embeddings
-
-    StreamlitUI->>FAISS: Store embeddings in FAISS index
-
-    User->>StreamlitUI: Ask a question
-    StreamlitUI->>OpenAI: Get embedding for question
-    OpenAI-->>StreamlitUI: Return question embedding
-    StreamlitUI->>FAISS: Search for similar chunks
-    FAISS-->>StreamlitUI: Return top matching chunks
-
-    StreamlitUI->>OpenAI: Generate answer using context
-    OpenAI-->>StreamlitUI: Return answer
-    StreamlitUI-->>User: Show answer
+![System Architecture](workflowpng.png)
 
 
