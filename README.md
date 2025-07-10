@@ -23,7 +23,6 @@ A Streamlit web application that allows you to upload a PDF document, create sem
 - Required Python packages (see requirements below)
 
 sequenceDiagram
-
     participant User
     participant StreamlitUI
     participant PDFLoader
