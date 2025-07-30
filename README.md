@@ -1,4 +1,4 @@
-# DocBot
+# DocxBot
 
 A Streamlit web application that allows you to upload a PDF document, create semantic embeddings of its content using OpenAI, and ask questions about the document. The app retrieves the most relevant text chunks and generates answers using OpenAI's language model.
 
