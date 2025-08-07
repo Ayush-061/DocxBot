@@ -26,7 +26,7 @@ A Streamlit web application that allows you to upload a PDF document, create sem
 
 ## 📊 Architecture Overview
 
-'''mermaid
+```mermaid
 sequenceDiagram
     participant User
     participant StreamlitUI
