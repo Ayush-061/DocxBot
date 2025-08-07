@@ -1,8 +1,9 @@
 # embeddings.py
-from openai_api import get_embedding
+
+from gemini_api import embed_texts
 import numpy as np
 
-def embed_texts(texts):
-  
-    embeddings = get_embedding(texts)  # get_embedding supports batch inputs
-    return [np.array(e) for e in embeddings]
+def embed_texts_wrapper(texts):
+    
+    embeddings = embed_texts(texts)  # This returns a list of lists
+    return [np.array(embedding, dtype=np.float32) for embedding in embeddings]
